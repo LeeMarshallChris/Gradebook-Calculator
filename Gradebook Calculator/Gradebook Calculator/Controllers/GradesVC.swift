@@ -13,9 +13,6 @@ class GradesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var assignments = [Assignment]()
     var queryString : String = ""
     
-    let shared = GradesVC()
-    
-    
     @IBOutlet weak var courseTitleTextView: UILabel!
     @IBOutlet weak var gradeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
