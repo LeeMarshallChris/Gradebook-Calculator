@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23E224" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Homework" representedClassName="Homework" syncable="YES">
+        <attribute name="homeworkTitle" optional="YES" attributeType="String"/>
+        <attribute name="pointsGiven" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="pointsTotal" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="schoolcourse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SchoolCourse" inverseName="homework" inverseEntity="SchoolCourse"/>
+    </entity>
+    <entity name="SchoolCourse" representedClassName="SchoolCourse" syncable="YES">
+        <attribute name="courseTitle" optional="YES" attributeType="String"/>
+        <relationship name="homework" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Homework" inverseName="schoolcourse" inverseEntity="Homework"/>
+    </entity>
+</model>
